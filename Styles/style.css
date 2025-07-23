@@ -3,20 +3,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
-.noto_serif {
-  font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-.inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +38,9 @@
   font-size: 1.44rem;
   color: black;
   opacity: 50%;
+  font-family: inter;
+  font-weight: 300;
+  margin-top: 16px;
 }
 /* Header style here ... */
 .fl_navigation {
@@ -85,13 +74,78 @@
 .fl_hero_content h1 {
   font-size: 4.1rem;
   margin-bottom: 15px;
+  font-weight: bold;
+}
+/* Add-to-cart section styles here ... */
+
+.fl_add_to_cart {
+  text-align: center;
+  margin: 120px 0;
+}
+.fl_add_to_cart p {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.fl_cart_group {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 20px;
+}
+.fl_single_cart {
+  display: flex;
+  flex-direction: column;
+}
+.fl_single_cart button {
+  background-color: #e95a08;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 19px;
+  font-family: inter;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.fl_single_cart h3 {
+  font-size: 1.4rem;
+  font-family: inter;
+  margin-top: 10px;
+}
+.fl_single_cart h3:nth-child(even) {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+/* Flower store styles here ... */
+
+.fl_flower_shop {
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  margin-top: 200px;
+}
+.fl_flower_shop img {
+  width: 46%;
+}
+.fl_flower_shop .fl_flower_shop_content ul {
+  padding-left: 40px;
+}
+.fl_flower_shop_content img {
+  position: absolute;
+  top: -140px;
+  left: 316px;
+  width: 27%;
 }
 
 /* Responsive For Mobile Device */
 
 @media screen and (max-width: 575px) {
   .fl_navigation,
-  .fl_hero_content {
+  .fl_hero_content,
+  .fl_add_to_cart,
+  .fl_flower_shop {
     padding: 30px 16px;
   }
 
@@ -107,10 +161,41 @@
   .fl_hero_area {
     flex-direction: column-reverse;
   }
-  .fl_hero_content h1 {
+  .fl_hero_content h1,
+  .fl_title {
     font-size: 1.5rem;
   }
   .fl_subTitle {
     font-size: 0.8rem;
+  }
+  /* add-to-cart Section */
+  .fl_add_to_cart {
+    text-align: center;
+    margin: 0;
+  }
+  .fl_add_to_cart p {
+    width: 100%;
+  }
+  .fl_cart_group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+  .fl_single_cart h3,
+  .fl_single_cart button {
+    font-size: 1rem;
+  }
+  /* shop_section */
+  .fl_flower_shop {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .fl_flower_shop img {
+    width: 100%;
+  }
+  .fl_flower_shop .fl_flower_shop_content ul {
+    padding-left: 22px;
+  }
+  .fl_flower_shop_content img {
+    display: none;
   }
 }
