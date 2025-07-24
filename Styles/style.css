@@ -35,7 +35,7 @@
   color: black;
 }
 .fl_subTitle {
-  font-size: 1.44rem;
+  font-size: 1.4rem;
   color: black;
   opacity: 50%;
   font-family: inter;
@@ -132,11 +132,20 @@
 .fl_flower_shop .fl_flower_shop_content ul {
   padding-left: 40px;
 }
+@keyframes myAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .fl_flower_shop_content img {
   position: absolute;
   top: -140px;
   left: 316px;
   width: 27%;
+  animation: myAnimation 3s infinite;
 }
 
 /* Challenge part styles here ... */
@@ -248,8 +257,29 @@
 /* Footer section style here ... */
 .fl_footer_section {
   padding: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 110px;
+  align-items: flex-start;
+}
+.fl_footer_logo {
+  width: 40%;
+}
+.fl_footer_nav {
+  width: 17%;
+}
+.fl_footer_nav ul {
+  gap: 26px;
+  flex-direction: column;
+  list-style: none;
+}
+.fl_footer_nav ul a {
+  color: #8987a1;
+  text-decoration: none;
+  font-family: inter;
+}
+.fl_social_icon {
+  width: 28%;
+  justify-content: end;
+  gap: 25px;
 }
 
 /*-------------------- Responsive For Mobile Device-------------------- */
@@ -279,7 +309,8 @@
     font-size: 1.5rem;
   }
   .fl_subTitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 20px;
   }
   /* add-to-cart Section */
   .fl_add_to_cart {
@@ -351,5 +382,18 @@
   }
   .fl_newsletter button {
     padding: 15px 19px;
+  }
+
+  /* Footer section Style here .... */
+  .fl_footer_section {
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px 16px;
+  }
+  .fl_footer_logo,
+  .fl_footer_nav,
+  .fl_social_icon {
+    width: 80%;
+    justify-content: flex-start;
   }
 }
