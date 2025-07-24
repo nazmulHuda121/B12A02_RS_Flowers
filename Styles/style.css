@@ -214,8 +214,45 @@
 .fl_cart_layout3 button {
   font-size: 1.6rem;
 }
+/* Newsletter section Style here ...... */
+.fl_newsletter {
+  background: url("../assets/news-letter-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+}
+.fl_newsletter h2 {
+  font-size: 3.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
 
-/* Responsive For Mobile Device */
+.fl_newsletter input {
+  padding: 15px 20px;
+  width: 650px;
+  font-family: inter;
+  outline: #ffffff;
+}
+.fl_newsletter button {
+  padding: 17px 50px;
+  color: #ffffff;
+  background: #e95a08;
+  border: none;
+  font-family: inter;
+  margin-left: -5px;
+}
+
+/* Footer section style here ... */
+.fl_footer_section {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/*-------------------- Responsive For Mobile Device-------------------- */
 
 @media screen and (max-width: 575px) {
   .fl_navigation,
@@ -293,7 +330,8 @@
   }
   .fl_cart_layout1 h4,
   .fl_cart_layout2 h4,
-  .fl_cart_layout3 h4 {
+  .fl_cart_layout3 h4,
+  .fl_newsletter h2 {
     font-size: 1.2rem;
   }
   .fl_cart_layout1 button,
@@ -304,5 +342,14 @@
   .fl_cart_layout_section,
   .fl_cart {
     gap: 20px;
+  }
+
+  /* Newsletter section */
+
+  .fl_newsletter input {
+    width: 218px;
+  }
+  .fl_newsletter button {
+    padding: 15px 19px;
   }
 }
